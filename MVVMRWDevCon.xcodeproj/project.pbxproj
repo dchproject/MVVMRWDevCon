@@ -15,6 +15,10 @@
 		846FAB1121A364EC0012C2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846FAB0F21A364EC0012C2FD /* LaunchScreen.storyboard */; };
 		846FAB1C21A364ED0012C2FD /* MVVMRWDevConTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB1B21A364ED0012C2FD /* MVVMRWDevConTests.swift */; };
 		846FAB2721A364ED0012C2FD /* MVVMRWDevConUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB2621A364ED0012C2FD /* MVVMRWDevConUITests.swift */; };
+		846FAB7721A369710012C2FD /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB7621A369710012C2FD /* LoginService.swift */; };
+		846FAB7921A3698B0012C2FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB7821A3698B0012C2FD /* LoginViewController.swift */; };
+		846FAB7D21A36A450012C2FD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB7C21A36A450012C2FD /* UserViewModel.swift */; };
+		846FAB7F21A36B2E0012C2FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FAB7E21A36B2E0012C2FD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		846FAB2221A364ED0012C2FD /* MVVMRWDevConUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMRWDevConUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846FAB2621A364ED0012C2FD /* MVVMRWDevConUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMRWDevConUITests.swift; sourceTree = "<group>"; };
 		846FAB2821A364ED0012C2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846FAB7621A369710012C2FD /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		846FAB7821A3698B0012C2FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		846FAB7C21A36A450012C2FD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		846FAB7E21A36B2E0012C2FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,15 @@
 		846FAB0221A364E70012C2FD /* MVVMRWDevCon */ = {
 			isa = PBXGroup;
 			children = (
-				846FAB0321A364E70012C2FD /* AppDelegate.swift */,
-				846FAB0521A364E70012C2FD /* ViewController.swift */,
-				846FAB0721A364E70012C2FD /* Main.storyboard */,
-				846FAB0D21A364EC0012C2FD /* Assets.xcassets */,
-				846FAB0F21A364EC0012C2FD /* LaunchScreen.storyboard */,
-				846FAB1221A364EC0012C2FD /* Info.plist */,
-				846FAB0A21A364E70012C2FD /* MVVMRWDevCon.xcdatamodeld */,
+				846FAB8121A36C480012C2FD /* Presenter */,
+				846FAB8021A36C3F0012C2FD /* Router */,
+				846FAB7B21A369B50012C2FD /* CoreData */,
+				846FAB7421A368C10012C2FD /* ViewModels */,
+				846FAB7321A368AE0012C2FD /* Models */,
+				846FAB7221A368A60012C2FD /* Views */,
+				846FAB7121A368970012C2FD /* Controllers */,
+				846FAB7521A3691F0012C2FD /* API */,
+				846FAB7A21A3699B0012C2FD /* Resources */,
 			);
 			path = MVVMRWDevCon;
 			sourceTree = "<group>";
@@ -126,6 +136,80 @@
 				846FAB2821A364ED0012C2FD /* Info.plist */,
 			);
 			path = MVVMRWDevConUITests;
+			sourceTree = "<group>";
+		};
+		846FAB7121A368970012C2FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB0521A364E70012C2FD /* ViewController.swift */,
+				846FAB7821A3698B0012C2FD /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		846FAB7221A368A60012C2FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		846FAB7321A368AE0012C2FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB7E21A36B2E0012C2FD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		846FAB7421A368C10012C2FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB7C21A36A450012C2FD /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		846FAB7521A3691F0012C2FD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB7621A369710012C2FD /* LoginService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		846FAB7A21A3699B0012C2FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB0321A364E70012C2FD /* AppDelegate.swift */,
+				846FAB0721A364E70012C2FD /* Main.storyboard */,
+				846FAB0D21A364EC0012C2FD /* Assets.xcassets */,
+				846FAB0F21A364EC0012C2FD /* LaunchScreen.storyboard */,
+				846FAB1221A364EC0012C2FD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		846FAB7B21A369B50012C2FD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				846FAB0A21A364E70012C2FD /* MVVMRWDevCon.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		846FAB8021A36C3F0012C2FD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		846FAB8121A36C480012C2FD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +344,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				846FAB0621A364E70012C2FD /* ViewController.swift in Sources */,
+				846FAB7D21A36A450012C2FD /* UserViewModel.swift in Sources */,
 				846FAB0C21A364E70012C2FD /* MVVMRWDevCon.xcdatamodeld in Sources */,
 				846FAB0421A364E70012C2FD /* AppDelegate.swift in Sources */,
+				846FAB7921A3698B0012C2FD /* LoginViewController.swift in Sources */,
+				846FAB7721A369710012C2FD /* LoginService.swift in Sources */,
+				846FAB7F21A36B2E0012C2FD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMRWDevCon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMRWDevCon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMRWDevCon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMRWDevCon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
