@@ -12,4 +12,8 @@ class LoginService {
     func loginWithUserName(_ username: String, password: String, _ completion: @escaping(_ success: Bool) -> Void) {
         
     }
+    
+    func generateAccessCode() -> String {
+        return ""
+    }
 }
